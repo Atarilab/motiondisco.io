@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Original (uncompressed) task videos — web-optimized copies live in static/videos/tasks/
+static/videos/shinka/

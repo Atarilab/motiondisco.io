@@ -8,7 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/dynaretarget.io/', // Required for GitHub Pages when repo is not named 'username.github.io'
+  base: '/motiondisco.io/', // Required for GitHub Pages when repo is not named 'username.github.io'
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

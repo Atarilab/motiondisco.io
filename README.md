@@ -1,6 +1,6 @@
-# DynaRetarget
+# MotionDisco
 
-This is the repository that contains source code for the [MotionDisco website](https://motiondisco.github.io).
+This is the repository that contains source code for the [MotionDisco website](https://atarilab.github.io/motiondisco.io/).
 
 If you find MotionDisco useful for your work please cite:
 <INCLUDE CITATION>

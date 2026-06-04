@@ -1,4 +1,4 @@
-# Setup Instructions for DynaRetarget React Integration
+# Setup Instructions for MotionDisco React Integration
 
 ## Project Structure
 
@@ -12,7 +12,7 @@ This project has been set up with:
 ## Directory Structure
 
 ```
-dynaretarget.io/
+motiondisco.io/
 ├── src/
 │   ├── components/
 │   │   └── ui/

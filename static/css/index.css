@@ -35,7 +35,10 @@ footer.footer .icon-link {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  background: black;
+  background:
+    radial-gradient(circle at 28% 22%, rgba(255, 165, 0, 0.10), transparent 45%),
+    radial-gradient(circle at 78% 78%, rgba(90, 90, 170, 0.12), transparent 50%),
+    linear-gradient(160deg, #050505 0%, #121212 55%, #050505 100%);
 }
 
 .hero-with-video-bg .hero-video-bg {
@@ -270,6 +273,26 @@ footer.footer .icon-link {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* Per-task sections */
+.section-tasks-intro {
+  padding-bottom: 1rem;
+}
+
+.section-tasks-intro .task-intro {
+  max-width: 720px;
+  margin: 0.75rem auto 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.section-task {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.section-task .task-title {
+  margin-bottom: 1.5rem;
 }
 
 .publication-body img {
