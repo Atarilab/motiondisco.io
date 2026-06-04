@@ -124,6 +124,11 @@ footer.footer .icon-link {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
+/* Bolded author names: keep white (Bulma colors bare <strong> dark grey) */
+.hero-with-video-bg .publication-authors strong {
+  color: inherit;
+}
+
 
 .footer .icon-link {
     font-size: 25px;
@@ -133,6 +138,8 @@ footer.footer .icon-link {
 .link-block a {
     margin-top: 5px;
     margin-bottom: 5px;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
 }
 
 .dnerf {
@@ -287,12 +294,51 @@ footer.footer .icon-link {
 }
 
 .section-task {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .section-task .task-title {
   margin-bottom: 1.5rem;
+}
+
+/* Overview figure */
+.section-overview .overview-figure {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.section-overview .overview-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.section-overview .overview-caption {
+  max-width: 760px;
+  margin: 1.25rem auto 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+}
+
+/* Soft gradient hairline that separates the lower sections */
+.section-abstract::before,
+.section-overview::before,
+.section-tasks-intro::before,
+.section-task::before {
+  content: "";
+  display: block;
+  width: min(680px, 82%);
+  height: 1px;
+  margin: 0 auto 3rem;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.28),
+    transparent
+  );
 }
 
 .publication-body img {

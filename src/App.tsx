@@ -5,14 +5,14 @@ const YOUTUBE_URL = "https://youtu.be/DHiVz34QYlw";
 
 // Optional hero background video. Set to a path (e.g. "./static/videos/hero.mp4")
 // to show a looping background behind the title; null shows the gradient backdrop.
-const HERO_VIDEO: string | null = null;
+const HERO_VIDEO: string | null = "./static/videos/tasks/banana_1.mp4";
 
 // One section per task. List one clip for a single centered video, or two clips
 // to show them side by side. Files live in static/videos/tasks/.
 const TASKS: { num: number; title: string; videos: string[] }[] = [
   {
     num: 1,
-    title: "Banana",
+    title: "Reach the Banana hanging from the ceiling",
     videos: [
       "./static/videos/tasks/banana_1.mp4",
       "./static/videos/tasks/banana_2.mp4",
@@ -20,7 +20,7 @@ const TASKS: { num: number; title: string; videos: string[] }[] = [
   },
   {
     num: 2,
-    title: "Climb Up with Object",
+    title: "Climb on the table with the box",
     videos: [
       "./static/videos/tasks/climb_up_with_object_1.mp4",
       "./static/videos/tasks/climb_up_with_object_2.mp4",
@@ -28,7 +28,7 @@ const TASKS: { num: number; title: string; videos: string[] }[] = [
   },
   {
     num: 3,
-    title: "Climb Up & Place on High Table",
+    title: "Climb on the table and place the object on the higher table",
     videos: [
       "./static/videos/tasks/climb_place_high_table_1.mp4",
       "./static/videos/tasks/climb_place_high_table_2.mp4",
@@ -36,12 +36,12 @@ const TASKS: { num: number; title: string; videos: string[] }[] = [
   },
   {
     num: 4,
-    title: "Long-Distance Pick & Place",
+    title: "Pick and place over long distance",
     videos: ["./static/videos/tasks/long_dist_pick_place.mp4"],
   },
   {
     num: 5,
-    title: "Move Through Clutter",
+    title: "Move through clutter to the other side",
     videos: [
       "./static/videos/tasks/move_through_clutter_1.mp4",
       "./static/videos/tasks/move_through_clutter_2.mp4",
@@ -49,9 +49,17 @@ const TASKS: { num: number; title: string; videos: string[] }[] = [
   },
   {
     num: 6,
-    title: "Under-Table Pick & Place",
+    title: "Pick the box from under the table and place it on top",
     videos: ["./static/videos/tasks/under_table_pick_place.mp4"],
   },
+  // {
+  //   num: 7,
+  //   title: "Climb up and down the table",
+  //   videos: [
+  //     "./static/videos/tasks/climb_up_down.mp4",
+  //     "./static/videos/tasks/climb_up_down2.mp4",
+  //   ],
+  // },
 ];
 
 function App() {
@@ -77,7 +85,7 @@ function App() {
                       <span className="title-motion">Motion</span><span className="title-disco">Disco</span>
                     </span>
                     <span className="publication-title-sub">
-                      <span className="title-line-1">Motion Discovery for Extreme</span>
+                      <span className="title-line-1">Motion Discovery for Extreme </span>
                       <span className="title-line-2">Humanoid Loco-Manipulation</span>
                     </span>
                   </h1>
@@ -93,13 +101,13 @@ function App() {
                 >
                   <div className="is-size-5 publication-authors">
                     <span className="author-block">
-                      <a href="https://www.linkedin.com/in/ilyass-taouil-8b2b15a7/?locale=en" target="_blank" rel="noopener noreferrer">Ilyass Taouil</a><sup>1,*</sup>,
+                      <a href="https://www.linkedin.com/in/ilyass-taouil-8b2b15a7/?locale=en" target="_blank" rel="noopener noreferrer"><strong>Ilyass Taouil</strong></a><sup>1,*</sup>,
                     </span>
                     <span className="author-block">
-                      Michal Ciebielski<sup>1,*</sup>,
+                      <strong>Michal Ciebielski</strong><sup>1,*</sup>,
                     </span>
                     <span className="author-block">
-                      <a href="https://shafeef901.github.io/" target="_blank" rel="noopener noreferrer">Shafeef Omar</a><sup>1,*</sup>,
+                      <a href="https://shafeef901.github.io/" target="_blank" rel="noopener noreferrer"><strong>Shafeef Omar</strong></a><sup>1,*</sup>,
                     </span>
                     <span className="author-block">
                       Haizhou Zhao<sup>1,2</sup>,
@@ -160,7 +168,7 @@ function App() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-abstract">
         <div className="container is-max-desktop">
           <div className="columns is-centered has-text-centered">
             <div className="column is-four-fifths">
@@ -183,13 +191,12 @@ function App() {
                 </p>
                 <p>
                   Finally, by training reinforcement learning tracking policies on the discovered
-                  trajectories, we transfer the motions to a real humanoid robot. This is the first
+                  trajectories, we transfer the motions to a real humanoid robot.
+                </p>
+                <p>
+                 <b> This is the first
                   work to discover and deploy long-horizon humanoid loco-manipulation skills entirely
-                  through automated evolutionary search.
-                  <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer">
-                    here
-                  </a>
-                  .
+                  through automated evolutionary search.</b>
                 </p>
               </div>
             </div>
@@ -197,9 +204,24 @@ function App() {
         </div>
       </section>
 
+      <section className="section section-overview">
+        <div className="container is-max-desktop has-text-centered">
+          <h2 className="title is-2 section-main-title">Overview</h2>
+          <figure className="overview-figure">
+            <img
+              src="./static/images/overview.png"
+              alt="Overview of the MotionDisco framework: an LLM-guided evolutionary tree search over interaction programs coupled with a contact-explicit motion planner."
+            />
+          </figure>
+          <p className="overview-caption">
+            MotionDisco couples LLM-guided evolutionary discovery of contact plans (left) with contact-explicit trajectory optimization (right). Each search node proposes a mutation of its parent program, conditioned on the goal prompt and the parent’s feasibility feedback; executing the mutated program yields a discrete contact plan (denoted by the blue dots). Plans that pass a kinematic feasibility check are sent to the trajectory optimizer, which assesses dynamic feasibility and returns the feedback that guides subsequent mutations.
+          </p>
+        </div>
+      </section>
+
       <section className="section section-tasks-intro">
         <div className="container is-max-desktop has-text-centered">
-          <h2 className="title is-2 section-main-title">Discovered Skills</h2>
+          <h2 className="title is-2 section-main-title">Discovered Skills for Diverse Long-Horizon Tasks</h2>
         </div>
       </section>
 
@@ -210,7 +232,7 @@ function App() {
           <section className="section section-task" key={task.num}>
             <div className="container is-max-desktop">
               <h2 className="title is-3 has-text-centered task-title">
-                {task.num}. {task.title}
+                {task.title}
               </h2>
               <div className="columns is-centered">
                 {task.videos.map((src) => (
