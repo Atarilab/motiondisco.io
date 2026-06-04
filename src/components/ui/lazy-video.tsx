@@ -6,9 +6,10 @@ interface LazyVideoProps {
   className?: string;
   controls?: boolean;
   loop?: boolean;
+  poster?: string;
 }
 
-export function LazyVideo({ src, className, controls = true, loop = true }: LazyVideoProps) {
+export function LazyVideo({ src, className, controls = true, loop = true, poster }: LazyVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -44,7 +45,8 @@ export function LazyVideo({ src, className, controls = true, loop = true }: Lazy
       playsInline
       muted
       loop={loop}
-      preload="auto"
+      poster={poster}
+      preload="metadata"
     />
   );
 }

@@ -23,7 +23,9 @@
       gtag('config', 'G-PYVRSFMDRL');
     </script>
 
-    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
           rel="stylesheet">
 
     <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -33,6 +35,8 @@
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     <link rel="stylesheet" href="./static/css/index.css">
+    <!-- New design layer: loaded last so it wins the cascade over Bulma + index.css -->
+    <link rel="stylesheet" href="./static/css/enhance.css">
   </head>
   <body>
     <div id="root"></div>
