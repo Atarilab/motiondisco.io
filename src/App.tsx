@@ -22,7 +22,7 @@ const HERO_CLIPS: HeroClip[] = [
   { src: "./static/videos/tasks/long_dist_pick_place.mp4", start: 9 },
   { src: "./static/videos/tasks/move_through_clutter_1.mp4", start: 7 },
   { src: "./static/videos/tasks/under_table_pick_place.mp4", start: 34 },
-  { src: "./static/videos/tasks/climb_up_with_object_2.mp4", start: 13 },
+  { src: "./static/videos/tasks/climb_up_with_object_2.mp4", start: 15 },
 ];
 const HERO_POSTER = "./static/images/hero_poster.jpg";
 
