@@ -10,7 +10,7 @@ import { VideoLightbox } from "@/components/ui/video-lightbox";
 import { CopyBibtex } from "@/components/ui/copy-bibtex";
 import { VideoTile } from "@/components/ui/video-tile";
 
-const ARXIV_URL = "#"; // TODO: set the arXiv/paper URL when available.
+const ARXIV_URL = "https://arxiv.org/pdf/2606.06139"; // TODO: set the arXiv/paper URL when available.
 const YOUTUBE_URL = "https://youtu.be/DHiVz34QYlw";
 
 // Curated, dynamic clips for the looping hero montage (files in static/videos/tasks/).
@@ -98,13 +98,14 @@ const SIM_VIDEOS = [
 ];
 
 // Placeholder citation — replace fields once the arXiv preprint is live.
-const BIBTEX = `@misc{taouil2026motiondisco,
-  title        = {MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation},
-  author       = {Taouil, Ilyass and Ciebielski, Michal and Omar, Shafeef and
-                  Zhao, Haizhou and Dai, Angela and Johnson, Aaron M. and Khadiv, Majid},
-  year         = {2026},
-  note         = {Preprint. arXiv identifier coming soon.},
-  url          = {https://atarilab.github.io/motiondisco.io/}
+const BIBTEX = `@misc{taouil2026motiondiscomotiondiscoveryextreme,
+      title={MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation}, 
+      author={Ilyass Taouil and Michal Ciebelski and Shafeef Omar and Haizhou Zhao and Angela Dai and Aaron M. Johnson and Majid Khadiv},
+      year={2026},
+      eprint={2606.06139},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2606.06139}, 
 }`;
 
 function App() {
@@ -449,7 +450,6 @@ function App() {
                   <a href="https://nerfies.github.io/" target="_blank" rel="noopener noreferrer">
                     Nerfies
                   </a> and modified with Claude :)
-                  .
                 </p>
 
                 <p>MotionDisco · Technical University of Munich · 2026</p>
