@@ -99,7 +99,7 @@ const SIM_VIDEOS = [
 
 // Placeholder citation — replace fields once the arXiv preprint is live.
 const BIBTEX = `@misc{taouil2026motiondiscomotiondiscoveryextreme,
-      title={MotionDisco: Motion Discovery for Extreme Humanoid Loco-Manipulation}, 
+      title={{MotionDisco}: Motion Discovery for Extreme Humanoid Loco-Manipulation}, 
       author={Ilyass Taouil and Michal Ciebelski and Shafeef Omar and Haizhou Zhao and Angela Dai and Aaron M. Johnson and Majid Khadiv},
       year={2026},
       eprint={2606.06139},
